@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52079a72-15a1-4e1d-94f6-81275139ebb9" name="Default" comment="" />
+    <list default="true" id="52079a72-15a1-4e1d-94f6-81275139ebb9" name="Default" comment="Movement now described by 2D vectors, boundaries">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/game/entity/Bullet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/game/Vector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/game/entity/BackGround.java" afterPath="$PROJECT_DIR$/src/main/java/game/entity/BackGround.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/game/entity/Entity.java" afterPath="$PROJECT_DIR$/src/main/java/game/entity/Entity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/game/Game.java" afterPath="$PROJECT_DIR$/src/main/java/game/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/game/entity/Player.java" afterPath="$PROJECT_DIR$/src/main/java/game/entity/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="SpaceGame.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="$USER_HOME$/TomatoNode/.idea/workspace.xml" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1429684617633" ignored="false" />
@@ -9,8 +17,8 @@
     <file path="/pom.xml" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1429259429079" ignored="false" />
     <file path="/Game.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1428890894446" ignored="false" />
     <file path="/Unit.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1428376229795" ignored="false" />
-    <file path="/BackGround.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1428523719491" ignored="false" />
-    <file path="/Entity.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1430798533246" ignored="false" />
+    <file path="/BackGround.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1430864995502" ignored="false" />
+    <file path="/Entity.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1430868512096" ignored="false" />
     <file path="/Main.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1428830815222" ignored="false" />
     <file path="/fragment.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1430800644836" ignored="false" />
     <file path="/Input.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1428890728793" ignored="false" />
@@ -36,7 +44,7 @@
     <file path="/CrawledResultsDAO.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1428654185261" ignored="false" />
     <file path="$USER_HOME$/TomatoNode/src/main/java/application/Main.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1430731140639" ignored="false" />
     <file path="$USER_HOME$/TomatoNode/src/main/java/application/crawler/util/Util.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1429431999926" ignored="false" />
-    <file path="/Dummy.txt" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1430799834233" ignored="false" />
+    <file path="/Dummy.txt" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1430868547367" ignored="false" />
     <file path="/Crawler.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1429253185835" ignored="false" />
     <file path="/Util.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1429431600216" ignored="false" />
     <file path="$USER_HOME$/TomatoNode/src/main/java/application/crawler/domain/Domain.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1429663684703" ignored="false" />
@@ -53,7 +61,7 @@
     <file path="/QueueImpl.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1429427567788" ignored="false" />
     <file path="$USER_HOME$/TomatoNode/src/main/java/service/messaging/Queue.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1429432010577" ignored="false" />
     <file path="/Queue.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1428995517727" ignored="false" />
-    <file path="/Player.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1430798921669" ignored="false" />
+    <file path="/Player.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1430866639349" ignored="false" />
     <file path="/Processor.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1428899892471" ignored="false" />
     <file path="$USER_HOME$/TomatoHub/src/main/java/application/processor/FreshDomainProcessor.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1428900704386" ignored="false" />
     <file path="$USER_HOME$/TomatoHub/src/main/java/application/dao/DomainStoreImpl.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1429605967546" ignored="false" />
@@ -109,7 +117,7 @@
     <file path="$USER_HOME$/imgay/.idea/misc.xml" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1429308216031" ignored="false" />
     <file path="/gay.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1429309702640" ignored="false" />
     <file path="$USER_HOME$/TomatoHub/src/test/java/Util/UtilTest.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1429432603218" ignored="false" />
-    <file path="$USER_HOME$/TomatoHub/src/main/java/application/queuemanager/FreshDomainManager.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1429605242502" ignored="false" />
+    <file path="$USER_HOME$/TomatoHub/src/main/java/application/queuemanager/FreshDomainManager.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1430802041858" ignored="false" />
     <file path="/FreshDomainManager.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1429603987840" ignored="false" />
     <file path="/DiscoveredDomainManager.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1429605651544" ignored="false" />
     <file path="/Robotstxt.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1429663699352" ignored="false" />
@@ -118,6 +126,8 @@
     <file path="/URLFilter.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1429677358516" ignored="false" />
     <file path="$USER_HOME$/TomatoNode/src/main/java/application/crawler/util/SiteMapParser.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1429681157839" ignored="false" />
     <file path="/SiteMapParser.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1429680685846" ignored="false" />
+    <file path="/Bullet.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1430864630749" ignored="false" />
+    <file path="/Vector.java" changelist="52079a72-15a1-4e1d-94f6-81275139ebb9" time="1430864734787" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,89 +187,101 @@
     <favorites_list name="SpaceGame" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="10" selection-start="808" selection-end="808" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/game/Game.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="68" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Input.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/game/Input.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="55" selection-start="882" selection-end="882" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Player.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/game/entity/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="31" selection-start="912" selection-end="912" vertical-scroll-proportion="0.9278752">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="13" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Entity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/game/entity/Entity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="0" selection-start="1270" selection-end="1270" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Enemy.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Documents/NetBeansProjects/spacegame/spaceship/src/ButteLol/Enemy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Board.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Documents/NetBeansProjects/spacegame/spaceship/src/ButteLol/Board.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="32" selection-start="4716" selection-end="4726" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Unit.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Documents/NetBeansProjects/spacegame/spaceship/src/ButteLol/Unit.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="4" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pom.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="16" column="46" selection-start="669" selection-end="669" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/game/Game.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="18" column="25" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Player.java" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/game/entity/Player.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="29" column="55" selection-start="830" selection-end="830" vertical-scroll-proportion="0.59774965">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="BackGround.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/game/entity/BackGround.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="19" column="52" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="2" column="13" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Vector.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/game/Vector.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="43" column="0" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Bullet.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/game/entity/Bullet.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="24" column="51" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="Player.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/game/entity/Player.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="42" column="5" selection-start="1294" selection-end="1294" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Entity.java" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/game/entity/Entity.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="74" column="0" selection-start="1475" selection-end="1475" vertical-scroll-proportion="0.4149086">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -284,19 +306,21 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/game/InputController.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/wtf.java" />
-        <option value="$PROJECT_DIR$/src/main/java/game/entity/BackGround.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/Input.java" />
+        <option value="$PROJECT_DIR$/src/main/java/game/entity/Bullet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/game/Vector.java" />
+        <option value="$PROJECT_DIR$/src/main/java/game/entity/BackGround.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/Game.java" />
-        <option value="$PROJECT_DIR$/src/main/java/game/entity/Entity.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/entity/Player.java" />
+        <option value="$PROJECT_DIR$/src/main/java/game/entity/Entity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="height" value="1176" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -342,6 +366,146 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="SpaceGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpaceGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpaceGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpaceGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpaceGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpaceGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpaceGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="effects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpaceGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpaceGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpaceGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpaceGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpaceGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpaceGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -539,29 +703,29 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3997773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23870334" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907662" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14941302" sideWeight="0.6002227" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27616927" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12860192" sideWeight="0.72396857" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27603143" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -642,35 +806,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/NetBeansProjects/spacegame/spaceship/src/ButteLol/Bullet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/NetBeansProjects/spacegame/spaceship/src/ButteLol/Enemy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/NetBeansProjects/spacegame/spaceship/src/ButteLol/Unit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="4" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/player.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="10" selection-start="808" selection-end="808" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Documents/NetBeansProjects/spacegame/spaceship/src/ButteLol/Player.java">
@@ -695,16 +833,21 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/effects/basic_bullet.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/Input.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="55" selection-start="882" selection-end="882" vertical-scroll-proportion="0.0">
+        <state line="20" column="55" selection-start="882" selection-end="882" vertical-scroll-proportion="0.47819972">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/entity/BackGround.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="5" selection-start="615" selection-end="615" vertical-scroll-proportion="0.76853526">
+        <state line="19" column="52" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -716,24 +859,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/Vector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="68" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0">
+        <state line="43" column="0" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/entity/Entity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/entity/Bullet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="0" selection-start="1270" selection-end="1270" vertical-scroll-proportion="0.0">
+        <state line="24" column="51" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="25" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="46" selection-start="669" selection-end="669" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/entity/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="31" selection-start="912" selection-end="912" vertical-scroll-proportion="0.9278752">
+        <state line="42" column="5" selection-start="1294" selection-end="1294" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/entity/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="0" selection-start="1475" selection-end="1475" vertical-scroll-proportion="0.4149086">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,6 +1,7 @@
 package game.entity;
 
 import game.Game;
+import game.Vector;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 
@@ -14,16 +15,17 @@ public class BackGround extends Entity {
             e.printStackTrace();
         }
 
-        yPosition = -image.getHeight() + Game.WINDOW_HEIGHT;
-        xPosition = 0;
+        float yPosition = -image.getHeight() + Game.WINDOW_HEIGHT;
+        float xPosition = 0;
+        position = new Vector(xPosition, yPosition);
         speed = 1f;
     }
 
     public void update(){
-        yPosition += speed;
+        position.add(new Vector(0, speed));
     }
 
     public void render(){
-        image.draw(xPosition, yPosition);
+        image.draw(position.getX(), position.getY());
     }
 }

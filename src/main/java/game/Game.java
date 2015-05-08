@@ -8,10 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Game extends BasicGame {
-    public static final int WINDOW_HEIGHT = 600;
+    public static final int WINDOW_HEIGHT = 1200;
     public static final int WINDOW_WIDTH = 800;
     private Entity backGround;
-    private Entity player;
+    private Player player;
     private List<Entity> enemies =  new ArrayList<Entity>();
     private List<Entity> projectiles = new ArrayList<Entity>();
 
@@ -40,11 +40,21 @@ public class Game extends BasicGame {
     @Override
     public void update(GameContainer container, int delta) throws SlickException{
         backGround.update();
+
+        for(Entity p : projectiles){
+            p.update();
+        }
         player.update();
+
+        projectiles.addAll(player.getFiredProjectiles());
+
     }
 
     public void render(GameContainer container, Graphics g) throws SlickException{
         backGround.render();
         player.render();
+        for(Entity p : projectiles){
+            p.render();
+        }
     }
 }

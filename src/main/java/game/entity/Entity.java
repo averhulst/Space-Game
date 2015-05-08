@@ -6,10 +6,11 @@ import org.newdawn.slick.Image;
 
 public abstract class Entity {
     protected Vector position;
+    protected Vector movementVector;
     protected float speed;
-    protected Image image;
     protected float width;
     protected float height;
+    protected Image image;
 
     public abstract void update();
 

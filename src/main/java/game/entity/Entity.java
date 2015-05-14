@@ -3,10 +3,11 @@ package game.entity;
 import game.Game;
 import game.Vector;
 import org.newdawn.slick.Image;
+import org.newdawn.slick.SlickException;
 
 public abstract class Entity {
     protected Vector position;
-    protected Vector movementVector;
+    protected Vector movementRate;
     protected float speed;
     protected float width;
     protected float height;
@@ -14,7 +15,9 @@ public abstract class Entity {
 
     public abstract void update();
 
-    public abstract void render();
+    public void render(){
+        image.draw(position.getX(), position.getY());
+    };
 
     public void setPosition(Vector position){
         this.position = position;
@@ -100,4 +103,13 @@ public abstract class Entity {
         }
     }
 
+    public void setImage(String path){
+        try {
+            image = new Image(path);
+            height = image.getHeight();
+            width = image.getWidth();
+        } catch (SlickException e) {
+            e.printStackTrace();
+        }
+    }
 }

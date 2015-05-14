@@ -1,30 +1,22 @@
-package game.entity;
+package game.entity.unit;
 
 import game.Game;
 import game.Input;
 import game.Vector;
-import game.entity.projectile.BasicBullet;
+import game.entity.Entity;
 import game.equipment.BasicGun;
 import game.equipment.Gun;
-import org.newdawn.slick.Image;
-import org.newdawn.slick.SlickException;
-
-import java.util.ArrayList;
 import java.util.List;
 
-public class Player extends Entity{
-    private List<Entity> firedProjectiles;
+public class Player extends Unit {
+
     private String sideToFireFrom = "left";
     private Gun gun = new BasicGun();
 
     public Player() {
-        try {
-            image = new Image("src/main/resources/player.png");
-            height = image.getHeight();
-            width = image.getWidth();
-        } catch (SlickException e) {
-            e.printStackTrace();
-        }
+        setImage("src/main/resources/player.png");
+        shieldPoints = 25;
+        hitPoints = 100;
 
         float xPosition = Game.WINDOW_HEIGHT / 2;
         float yPosition = Game.WINDOW_WIDTH/ 2;
@@ -37,7 +29,7 @@ public class Player extends Entity{
     }
 
     public void update(){
-        firedProjectiles =  new ArrayList<>();
+        super.update();
         Vector desiredMove = new Vector(0,0);
 
         if(Input.isKeyDown(Input.KEY_UP) || Input.isKeyDown(Input.KEY_W)){
@@ -54,20 +46,14 @@ public class Player extends Entity{
         }
 
         if(Input.isKeyDown(Input.KEY_SPACE)){
-            shootBullet();
+            shoot();
         }
 
         move(desiredMove);
     }
 
-    public void render(){
-        image.draw(position.getX(), position.getY());
-    }
-
-    public void shootBullet(){
+    public void shoot(){
         Vector bulletInitialLocation = new Vector(0,0);
-
-
 
         Entity projectile = gun.shoot();
         if(projectile != null){

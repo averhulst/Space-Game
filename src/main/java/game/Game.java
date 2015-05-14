@@ -2,7 +2,7 @@ package game;
 
 import game.entity.BackGround;
 import game.entity.Entity;
-import game.entity.Player;
+import game.entity.unit.Player;
 import org.newdawn.slick.*;
 import java.util.ArrayList;
 import java.util.List;

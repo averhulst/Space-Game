@@ -3,15 +3,19 @@ package game.entity;
 import game.Game;
 import game.Input;
 import game.Vector;
+import game.entity.projectile.BasicBullet;
+import game.equipment.BasicGun;
+import game.equipment.Gun;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
-import game.entity.projectile.Bullet;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Player extends Entity{
     private List<Entity> firedProjectiles;
     private String sideToFireFrom = "left";
+    private Gun gun = new BasicGun();
 
     public Player() {
         try {
@@ -61,19 +65,24 @@ public class Player extends Entity{
     }
 
     public void shootBullet(){
-        Vector bulletInitalLocation = new Vector(0,0);
+        Vector bulletInitialLocation = new Vector(0,0);
 
-        if(sideToFireFrom.equals("left")){
-            bulletInitalLocation.add(new Vector(position.getX(), position.getY()));
-            sideToFireFrom = "right";
-        }else{
-            bulletInitalLocation.add(new Vector(position.getX() + width, position.getY()));
-            sideToFireFrom = "left";
+
+
+        Entity projectile = gun.shoot();
+        if(projectile != null){
+
+            if(sideToFireFrom.equals("left")){
+                bulletInitialLocation.add(new Vector(position.getX(), position.getY()));
+                sideToFireFrom = "right";
+            }else{
+                bulletInitialLocation.add(new Vector(position.getX() + width, position.getY()));
+                sideToFireFrom = "left";
+            }
+
+            projectile.setPosition(bulletInitialLocation);
+            firedProjectiles.add(projectile);
         }
-
-        Bullet bullet = new Bullet(bulletInitalLocation);
-
-        firedProjectiles.add(bullet);
     }
 
 }

@@ -5,10 +5,9 @@ import game.entity.Entity;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 
-public class Bullet extends Entity{
+public class BasicBullet extends Entity{
 
-    public Bullet(Vector position) {
-        this.position = position;
+    public BasicBullet(){
         this.movementVector = new Vector(0, -5f);
 
         try {
@@ -18,6 +17,9 @@ public class Bullet extends Entity{
         }
     }
 
+    public void setPosition(Vector position){
+        this.position = position;
+    }
     public void update(){
         position.add(movementVector);
     }

@@ -16,6 +16,10 @@ public abstract class Entity {
 
     public abstract void render();
 
+    public void setPosition(Vector position){
+        this.position = position;
+    }
+
     public float getXPosition() {
         return position.getX();
     }

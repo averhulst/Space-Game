@@ -1,8 +1,5 @@
 package game;
 
-import org.newdawn.slick.*;
-
-
 public class Input {
     private static org.newdawn.slick.Input input = new org.newdawn.slick.Input(800);
     //All these constants come from LWJGL's Keyboard class
@@ -139,4 +136,6 @@ public class Input {
     public static boolean isKeyDown(int keyCode){
         return input.isKeyDown(keyCode);
     }
+
+
 }

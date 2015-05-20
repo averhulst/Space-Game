@@ -53,8 +53,9 @@ public abstract class Entity {
 
     public boolean collidesWith(Entity e){
         return
-                (getYMax() >= e.getYMin() && getYMin() <= e.getYMax())
-             && (getXMax() >= e.getXMin() && getXMin() <= e.getXMax());
+                    (getYMax() >= e.getYMin() && getYMin() <= e.getYMax())
+             &&
+                    (getXMax() >= e.getXMin() && getXMin() <= e.getXMax());
     }
 
     public float getXMax(){
@@ -101,6 +102,7 @@ public abstract class Entity {
                 position.add(new Vector(desiredMove.getX(), 0));
             }
         }
+
     }
 
     public void setImage(String path){

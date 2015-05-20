@@ -2,7 +2,11 @@ package game;
 
 import game.entity.BackGround;
 import game.entity.Entity;
+import game.entity.enemy.EnemyFactory;
+import game.entity.enemy.EnemyFighter;
+import game.entity.projectile.Projectile;
 import game.entity.unit.Player;
+import game.entity.unit.Unit;
 import org.newdawn.slick.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,8 +16,8 @@ public class Game extends BasicGame {
     public static final int WINDOW_WIDTH = 800;
     private Entity backGround;
     private Player player;
-    private List<Entity> enemies =  new ArrayList<Entity>();
-    private List<Entity> projectiles = new ArrayList<Entity>();
+    private List<Unit> enemies =  new ArrayList<Unit>();
+    private List<Projectile> projectiles = new ArrayList<Projectile>();
 
     public Game(){
         super("Space Game");
@@ -35,19 +39,39 @@ public class Game extends BasicGame {
     public void init(GameContainer container) throws SlickException{
         backGround = new BackGround();
         player = new Player();
+        enemies.add(EnemyFactory.buildEnemy("fighter", new Vector(50,50)));
     }
 
     @Override
     public void update(GameContainer container, int delta) throws SlickException{
+        List<Entity> projectilesToRemove = new ArrayList<>();
         backGround.update();
 
-        for(Entity p : projectiles){
-            p.update();
+        for(Projectile p : projectiles){
+            if(isOnScreen(p)){
+                p.update();
+
+                for(Unit e : enemies){
+                    if(p.collidesWith(e)){
+                        e.applyDamage(p.getDamage());
+                    }
+                }
+
+            }else{
+                projectilesToRemove.add(p);
+            }
         }
+
+        for(Entity p : projectilesToRemove){
+            projectiles.remove(p);
+        }
+
+        for(Entity e : enemies){
+            e.update();
+        }
+
         player.update();
-
         projectiles.addAll(player.getFiredProjectiles());
-
     }
 
     public void render(GameContainer container, Graphics g) throws SlickException{
@@ -56,5 +80,17 @@ public class Game extends BasicGame {
         for(Entity p : projectiles){
             p.render();
         }
+
+        for(Entity e : enemies){
+            e.render();
+        }
+
+    }
+
+    private boolean isOnScreen(Entity e){
+        return
+                e.getYPosition() > 0 && e.getYPosition() < Game.WINDOW_HEIGHT
+                &&
+                e.getXPosition() > 0 && e.getXPosition() < Game.WINDOW_WIDTH;
     }
 }

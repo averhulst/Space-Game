@@ -1,7 +1,7 @@
 package game.equipment;
 
-import game.entity.Entity;
+import game.entity.projectile.Projectile;
 
 public interface Gun {
-    public Entity shoot();
+    public Projectile shoot();
 }

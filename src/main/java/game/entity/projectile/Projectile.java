@@ -8,4 +8,8 @@ public class Projectile extends Entity{
     public void update(){
         position.add(movementRate);
     }
+
+    public int getDamage(){
+        return damage;
+    }
 }

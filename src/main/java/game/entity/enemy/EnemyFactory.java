@@ -1,17 +1,19 @@
-package game.entity.unit.enemy;
+package game.entity.enemy;
 
+import game.Vector;
 import game.entity.Entity;
+import game.entity.unit.Unit;
 
 public class EnemyFactory {
-    public Entity buildEnemy(String type){
-        Entity enemy;
+    public static Unit buildEnemy(String type, Vector origin){
+        Unit enemy;
         switch (type) {
             case "fighter":
-                enemy = new EnemyFighter();
+                enemy = new EnemyFighter(origin);
 
                 break;
             case "bomber":
-                enemy = new EnemyBomber();
+                enemy = new EnemyBomber(origin);
                 break;
             default:
                 throw new RuntimeException("unable to build enemy of type: " + type);

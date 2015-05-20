@@ -4,6 +4,7 @@ import game.Game;
 import game.Input;
 import game.Vector;
 import game.entity.Entity;
+import game.entity.projectile.Projectile;
 import game.equipment.BasicGun;
 import game.equipment.Gun;
 import java.util.List;
@@ -24,7 +25,7 @@ public class Player extends Unit {
         speed = 5f;
     }
 
-    public List<Entity> getFiredProjectiles(){
+    public List<Projectile> getFiredProjectiles(){
         return firedProjectiles;
     }
 
@@ -55,7 +56,7 @@ public class Player extends Unit {
     public void shoot(){
         Vector bulletInitialLocation = new Vector(0,0);
 
-        Entity projectile = gun.shoot();
+        Projectile projectile = gun.shoot();
         if(projectile != null){
 
             if(sideToFireFrom.equals("left")){

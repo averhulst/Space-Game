@@ -30,16 +30,19 @@ public abstract class Entity {
     public float getXPosition() {
         return position.getX();
     }
+
     public Vector getCenter(){
         Vector center = new Vector(0,0);
         center.setX(position.getX() + width / 2);
         center.setY(position.getY() + height / 2);
         return center;
     }
+
     public void setCenter(Vector v){
         position.setX(v.getX() - width / 2);
         position.setY(v.getY() - height /2);
     }
+
     public void setXPosition(float x) {
         this.position.setX(x);
     }

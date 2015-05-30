@@ -1,10 +1,8 @@
 package game.entity.unit;
 
-import game.Vector;
 import game.entity.Entity;
 import game.entity.projectile.Projectile;
 import game.equipment.Gun;
-
 import java.util.ArrayList;
 import java.util.List;
 

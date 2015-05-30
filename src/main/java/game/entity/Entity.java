@@ -15,6 +15,10 @@ public abstract class Entity {
 
     public abstract void update();
 
+    public Entity(){
+        //initialize entity off screen, until position is set
+        position = new Vector(-500, -500);
+    }
     public void render(){
         image.draw(position.getX(), position.getY());
     };
@@ -26,7 +30,16 @@ public abstract class Entity {
     public float getXPosition() {
         return position.getX();
     }
-
+    public Vector getCenter(){
+        Vector center = new Vector(0,0);
+        center.setX(position.getX() + width / 2);
+        center.setY(position.getY() + height / 2);
+        return center;
+    }
+    public void setCenter(Vector v){
+        position.setX(v.getX() - width / 2);
+        position.setY(v.getY() - height /2);
+    }
     public void setXPosition(float x) {
         this.position.setX(x);
     }
@@ -107,9 +120,11 @@ public abstract class Entity {
 
     public void setImage(String path){
         try {
+            Vector center = getCenter();
             image = new Image(path);
             height = image.getHeight();
             width = image.getWidth();
+            setCenter(center);
         } catch (SlickException e) {
             e.printStackTrace();
         }

@@ -1,5 +1,6 @@
 package game.entity.unit;
 
+import game.Vector;
 import game.entity.Entity;
 import game.entity.projectile.Projectile;
 import game.equipment.Gun;
@@ -8,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Unit extends Entity {
+    protected boolean isAlive = true;
     protected short hitPoints;
     protected short shieldPoints;
     protected List<Projectile> firedProjectiles;
@@ -56,8 +58,10 @@ public abstract class Unit extends Entity {
     public void update(){
         firedProjectiles =  new ArrayList<>();
         if(hitPoints <= 0){
-            kill();
-            System.out.println(image.getAlpha());
+            if(isAlive){
+                kill();
+                isAlive = false;
+            }
             alpha_HACK -= 0.01f;
             image.setAlpha(alpha_HACK);
         }
